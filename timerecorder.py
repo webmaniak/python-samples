@@ -25,7 +25,7 @@ def measure(counter):
 
 counter = 1
 with measure(counter) as m:
-    while counter < 100000000:
+    while counter < 1000000000:
         counter += 1
 
 print("Done!")
