@@ -1,6 +1,7 @@
 import datetime
 
 class TimeRecorder():
+    """Records the elapsed time between the enter and exit statements."""
 
     def __init__(self):
         self.start_time = None
