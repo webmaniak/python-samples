@@ -27,9 +27,11 @@ def make_list(*names):
         my_list.append(name)
     return my_list
 
-#greet(name='Jeff')
+def make_pizza(radius, *toppings):
+    """Makes a tasty pizza (not a real one, come on!) and display what's on it."""
 
-#name = input("Please tell me your name: ")
-#greet_kids(uppercase_first_letter(name))
+    diameter = radius * 2
+    print("Thanks for your order, you'll shortly receive a " + str(diameter) + "cm pizza with:")
 
-#print(make_list('yellow', 'orange', 'blue'))
+    for topping in toppings:
+        print("- " + topping)
