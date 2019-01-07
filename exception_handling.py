@@ -1,10 +1,11 @@
 """This file's aim is to demonstrate how to handle exceptions in Python."""
 
 # Add the "classes/" subdirectory to the path accessible by this script
-import sys
-sys.path.append('classes/')
+# This needs to be done if your subdirectory doesn't contain a __init__.py file
+#import sys
+#sys.path.append('classes/')
 
-from custom_exception import MyCustomError # pylint: disable=E0401
+from classes.custom_exception import MyCustomError
 
 print("------------------------------")
 print("Exception handling")
