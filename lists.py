@@ -68,9 +68,11 @@ for car in cars[0:2]:
 # Copy a list
 my_fav_foods = ["spaghetti", "cheese", "chocolate"]
 friend_fav_foods = my_fav_foods[:] # /!\ Note the [:] which makes a copy!
+first_two_plates = my_fav_foods[:len(my_fav_foods)-1]
 
 print(my_fav_foods)
 print(friend_fav_foods)
+print(first_two_plates)
 
 friend_fav_foods.insert(1, "avocado")
 print(my_fav_foods)
