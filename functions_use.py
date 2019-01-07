@@ -21,6 +21,10 @@
 
 #from functions import greet, greet_kids
 #greet("Alain")
+#greet(name='Jeff') # will also work
+
+#name = input("Please tell me your name: ")
+#greet_kids(uppercase_first_letter(name))
 
 # ------------------------------
 # Importing only one function of the "functions" module
@@ -36,5 +40,7 @@
 # ------------------------------
 
 from functions import *
+
 greet_kids("Josh")
 print(make_list('list', 'array', 'collection', 'iterable'))
+make_pizza(10, 'tomato sauce', 'mozarella', 'ham', 'mushrooms')
