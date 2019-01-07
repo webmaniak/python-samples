@@ -21,9 +21,8 @@ class TimeRecorder():
                 + str(int(self.delta_time.microseconds / 1000))
                 + "s")
 
-with TimeRecorder() as t:
-    counter = 1
-    while counter < 10000000:
-        counter += 1
-
-print("End of program.")
+# Example of usage:
+# with TimeRecorder() as t:
+#     counter = 1
+#     while counter < 10000000:
+#         counter += 1
