@@ -1,0 +1,1 @@
+"""Notifies Python the 'tests' folder has to be used as a package."""
