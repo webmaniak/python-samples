@@ -1,5 +1,5 @@
 import unittest
-from animals import Dog
+from classes.animals import Dog
 
 class DogTestClass(unittest.TestCase):
     """Tests for animals.py"""
@@ -13,6 +13,8 @@ class DogTestClass(unittest.TestCase):
     def test_dog_age(self):
         self.assertEqual(self.dog.age, 5)
 
-#unittest.main()
-suite = unittest.TestLoader().loadTestsFromTestCase(DogTestClass)
-unittest.TextTestRunner(verbosity=2).run(suite)
+if __name__ == '__main__':
+    unittest.main()
+
+#suite = unittest.TestLoader().loadTestsFromTestCase(DogTestClass)
+#unittest.TextTestRunner(verbosity=2).run(suite)
