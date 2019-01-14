@@ -1,6 +1,6 @@
 """Trying some stuff with classes and underscore variables."""
 
-from underscores import Car, ElectricCar # pylint: disable=E0401
+from classes.underscores import Car, ElectricCar # pylint: disable=E0401
 
 # ------------------------------
 # Trying some stuff with those classes
