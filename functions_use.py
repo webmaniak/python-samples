@@ -116,3 +116,17 @@ print(f'4 divided by 2 = {divide_by_2(4)}')
 
 """
 
+# ------------------------------
+# Define an anonymous one-liner function
+# ------------------------------
+
+"""
+add_func = lambda x, y: x + y
+first_number = 5
+second_number = 10
+print(f'{first_number} + {second_number} = '
+    f'{add_func(first_number, second_number)}')
+
+# Or simply put:
+print((lambda x, y: x + y)(5, 10))
+"""
