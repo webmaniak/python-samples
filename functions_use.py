@@ -53,7 +53,7 @@ A few use cases for functions defined in functions.py. (uncomment to execute)
 # Demonstrating how functions ARE objects.
 # ------------------------------
 
-
+"""
 from functions import greet, change_case, make_formatted_list, get_talking_volume, get_talking_volume2, make_multiplier
 
 say_hello = greet
@@ -91,6 +91,13 @@ print(speak_low2()) # get_talking_volume2('Hello', 73)() would work too!
 multiplier = make_multiplier(3) # create a 'by 3' multiplier
 print(f'Multiply 5 by 3: {multiplier(5)}')
 
+"""
+
 # ------------------------------
-# 
+# Use a class (almost) like a function
 # ------------------------------
+
+from classes.callable import Divider
+
+divide_by_2 = Divider(2)
+print(f'4 divided by 2 = {divide_by_2(4)}')
