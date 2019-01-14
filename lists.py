@@ -91,3 +91,13 @@ if "Audi" not in cars:
     print("Audi is not a good brand so we won't list it here.")
 if "Opel" in cars:
     print("Oh, so you tried Opel already? Good!")
+
+# You can also shorten list creation by using 'list comprehensions':
+even_numbers = [x for x in range(16) if x % 2 == 0]
+print(even_numbers)
+# is the same as
+even_numbers_manual = []
+for x in range(16):
+    if x % 2 == 0:
+        even_numbers_manual.append(x)
+print(even_numbers_manual)
