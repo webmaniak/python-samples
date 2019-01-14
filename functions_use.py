@@ -129,4 +129,10 @@ print(f'{first_number} + {second_number} = '
 
 # Or simply put:
 print((lambda x, y: x + y)(5, 10))
+
+
+# And here we'll sort a list based on each string's second letter
+fruits = ['Banana', 'Apple', 'Pineapple', 'Orange']
+ordered_fruits = sorted(fruits, key = lambda x: x[1])
+print(ordered_fruits)
 """
