@@ -25,6 +25,23 @@ def change_case(name, uppercasing_function):
     """
     return uppercasing_function(name)
 
+def whisper(text):
+    """A function defining an inner function."""
+    def to_lower(t):
+        return t.lower() + '...'
+    return to_lower(text)
+
+def get_talking_volume(music_volume):
+    def low(t):
+        return t.lower() + '...'
+    def high(t):
+        return t.upper() + '!!!'
+    
+    if music_volume > 50:
+        return high
+    else:
+        return low
+
 def make_list(*names):
     """Creates a list out of an undefined amount of names."""
     my_list = []

@@ -53,7 +53,8 @@ A few use cases for functions defined in functions.py. (uncomment to execute)
 # Demonstrating how functions ARE objects.
 # ------------------------------
 
-from functions import greet, change_case, make_formatted_list
+
+from functions import greet, change_case, make_formatted_list, get_talking_volume
 
 say_hello = greet
 greet("Tobias")
@@ -76,3 +77,14 @@ print(change_case('Bilbo', str.lower))
 formatted_list = make_formatted_list(str.upper, 'apple', 'banana', 'pear')
 for fruit in formatted_list:
     print(f'- {fruit}')
+
+# You can also get nested functions to execute something
+speak_high = get_talking_volume(63)
+speak_low = get_talking_volume(20)
+
+print(speak_high('Let\'s go party'))
+print(speak_low('Sshh, it\'s only ambiant sound'))
+
+# ------------------------------
+# 
+# ------------------------------
