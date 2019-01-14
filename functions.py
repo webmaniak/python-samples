@@ -84,3 +84,9 @@ def make_pizza(radius, *toppings):
 
     for topping in toppings:
         print("- " + topping)
+
+def reverse_string_generator(text):
+    """Reverses a string using the generator function of Python."""
+    length = len(text)
+    for c in range(length - 1, -1, -1):
+        yield text[c]

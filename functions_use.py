@@ -136,3 +136,13 @@ fruits = ['Banana', 'Apple', 'Pineapple', 'Orange']
 ordered_fruits = sorted(fruits, key = lambda x: x[1])
 print(ordered_fruits)
 """
+
+# ------------------------------
+# Example of generator (iterable) in Python
+# ------------------------------
+
+from functions import reverse_string_generator
+
+text = 'Hello World!'
+for c in reverse_string_generator(text):
+    print(c)
