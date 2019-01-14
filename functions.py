@@ -18,12 +18,27 @@ def uppercase_first_letter(name):
     """Uppercases the given string."""
     return name.title()
 
+def change_case(name, uppercasing_function):
+    """"
+    Use function passed in parameter to uppercase a name.
+    A function getting a function in parameters is called higher-order function.
+    """
+    return uppercasing_function(name)
+
 def make_list(*names):
     """Creates a list out of an undefined amount of names."""
     my_list = []
     for name in names:
         my_list.append(name)
     return my_list
+
+def make_formatted_list(func, *names):
+    """
+    Creates a list with formatted names using the 'map' function.
+    - list() creates a list
+    - map() applies a function to multiple objects
+    """
+    return list(map(func, names))
 
 def make_pizza(radius, *toppings):
     """Makes a tasty pizza (not a real one, come on!) and display what's on it."""

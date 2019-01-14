@@ -1,3 +1,7 @@
+"""
+A few use cases for functions defined in functions.py. (uncomment to execute)
+"""
+
 # ------------------------------
 # Importing the "functions" module
 # and using it the in a raw way
@@ -39,8 +43,36 @@
 # and using it without aliases
 # ------------------------------
 
-from functions import *
+#from functions import *
 
-greet_kids("Josh")
-print(make_list('list', 'array', 'collection', 'iterable'))
-make_pizza(10, 'tomato sauce', 'mozarella', 'ham', 'mushrooms')
+#greet_kids("Josh")
+#print(make_list('list', 'array', 'collection', 'iterable'))
+#make_pizza(10, 'tomato sauce', 'mozarella', 'ham', 'mushrooms')
+
+# ------------------------------
+# Demonstrating how functions ARE objects.
+# ------------------------------
+
+from functions import greet, change_case, make_formatted_list
+
+say_hello = greet
+greet("Tobias")
+say_hello("Mark")
+
+del greet # remove the access to the "greet" function
+#greet("Monique") # will crash, as expected!
+say_hello("Mirella") # still works and references functions.greet
+print(f'The say_hello function points to {say_hello.__name__}\'s definition.')
+
+# You can create a list of functions, since they are objects
+list_of_funcs = [str.title, str.upper]
+for func in list_of_funcs:
+    print(func('arnold'))
+
+# You can even pass functions as function parameters
+print(change_case('Bilbo', str.upper))
+print(change_case('Bilbo', str.lower))
+
+formatted_list = make_formatted_list(str.upper, 'apple', 'banana', 'pear')
+for fruit in formatted_list:
+    print(f'- {fruit}')
