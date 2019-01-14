@@ -18,35 +18,6 @@ def uppercase_first_letter(name):
     """Uppercases the given string."""
     return name.title()
 
-def concat_strings(str1, str2=''):
-    """Concatenates two strings together."""
-    if str2:
-        return str1 + str2
-    else:
-        return str1
-
-def concat_strings_by_format(str1, str2=''):
-    """Concatenates two strings using the str.format() instruction."""
-    if str2:
-        return '{some}{placeholder}'.format(some=str1, placeholder=str2)
-    else:
-        return str1
-
-def concat_strings_by_list(str1, str2=''):
-    """Concatenates two strings using lists."""
-    if str2:
-        return ''.join([str1, str2])
-    else:
-        return str1
-
-def concat_strings_by_map(str1, str2=''):
-    """Concatenates two strings using maps."""
-    if str2:
-        result = map(str, [str1, str2])
-        return ''.join(result)
-    else:
-        return str1
-
 def make_list(*names):
     """Creates a list out of an undefined amount of names."""
     my_list = []
