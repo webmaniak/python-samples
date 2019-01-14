@@ -1,5 +1,6 @@
 import unittest
 from .context import functions as f
+from .context import strings as s
 
 class FunctionTestCase(unittest.TestCase):
     """A bunch of tests meant to check functions.py's behavior."""
@@ -15,7 +16,7 @@ class FunctionTestCase(unittest.TestCase):
     def test_concat_strings(self):
         first_string = 'hello'
         second_string = 'world'
-        result = f.concat_strings(first_string, second_string)
+        result = s.concat_strings(first_string, second_string)
         self.assertEqual('helloworld', result)
 
     def test_make_list(self):
