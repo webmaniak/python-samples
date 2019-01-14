@@ -54,7 +54,7 @@ A few use cases for functions defined in functions.py. (uncomment to execute)
 # ------------------------------
 
 
-from functions import greet, change_case, make_formatted_list, get_talking_volume
+from functions import greet, change_case, make_formatted_list, get_talking_volume, get_talking_volume2, make_multiplier
 
 say_hello = greet
 greet("Tobias")
@@ -81,9 +81,15 @@ for fruit in formatted_list:
 # You can also get nested functions to execute something
 speak_high = get_talking_volume(63)
 speak_low = get_talking_volume(20)
+speak_low2 = get_talking_volume2('Hello', 73)
 
 print(speak_high('Let\'s go party'))
 print(speak_low('Sshh, it\'s only ambiant sound'))
+print(speak_low2()) # get_talking_volume2('Hello', 73)() would work too!
+
+# You can also create a factory using a function:
+multiplier = make_multiplier(3) # create a 'by 3' multiplier
+print(f'Multiply 5 by 3: {multiplier(5)}')
 
 # ------------------------------
 # 

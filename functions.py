@@ -32,6 +32,7 @@ def whisper(text):
     return to_lower(text)
 
 def get_talking_volume(music_volume):
+    """A function that will return the appropriate nested function based on a simple input."""
     def low(t):
         return t.lower() + '...'
     def high(t):
@@ -41,6 +42,24 @@ def get_talking_volume(music_volume):
         return high
     else:
         return low
+
+def get_talking_volume2(text, music_volume):
+    """An extended version of the 'get_talking_volume' function"""
+    def low():
+        return text.lower() + '...'
+    def high():
+        return text.upper() + '!!!'
+    
+    if music_volume > 50:
+        return high
+    else:
+        return low
+
+def make_multiplier(n):
+    def multiply(x):
+        return x * n
+
+    return multiply
 
 def make_list(*names):
     """Creates a list out of an undefined amount of names."""
