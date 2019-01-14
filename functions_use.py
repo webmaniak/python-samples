@@ -100,4 +100,5 @@ print(f'Multiply 5 by 3: {multiplier(5)}')
 from classes.callable import Divider
 
 divide_by_2 = Divider(2)
+print(f'Is the Divider class a callable? Answer: {callable(divide_by_2)}')
 print(f'4 divided by 2 = {divide_by_2(4)}')
