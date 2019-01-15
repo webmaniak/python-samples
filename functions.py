@@ -85,6 +85,11 @@ def make_pizza(radius, *toppings):
     for topping in toppings:
         print("- " + topping)
 
+def format_friend_list(name, **friends):
+    print(f'Hello to {name} and his following friends:')
+    for position, friend_name in friends.items():
+        print(f'- {position}: {friend_name}')
+
 def reverse_string_generator(text):
     """Reverses a string using the generator function of Python."""
     length = len(text)

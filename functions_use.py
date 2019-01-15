@@ -57,6 +57,7 @@ from functions import *
 greet_kids("Josh")
 print(make_list('list', 'array', 'collection', 'iterable'))
 make_pizza(10, 'tomato sauce', 'mozarella', 'ham', 'mushrooms')
+format_friend_list('Thomas', first='Chiara', second='Matthias')
 """
 
 # ------------------------------
@@ -141,8 +142,10 @@ print(ordered_fruits)
 # Example of generator (iterable) in Python
 # ------------------------------
 
+"""
 from functions import reverse_string_generator
 
 text = 'Hello World!'
 for c in reverse_string_generator(text):
     print(c)
+"""
