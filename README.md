@@ -37,6 +37,8 @@ Here's some table of content about what's in this repo:
 - [tests](tests/) contains unit tests for some of the code (especially classes)
 - There are other modules in the [root](#) folder too:
   - [datetime_usage.py](datetime_usage.py) shows how to use the datetime API from Python
+  - [decorators_use.py](decorators_use.py) demonstrates some use cases of decorators defined in [decorators.py](decorators.py)
+  - [decorators.py](decorators.py) defines a few sample decorators
   - [dictionary.py](dictionary.py) shows how to use Python's dictionary structure
   - [exception_handling.py](exception_handling.py) features how to deal with exceptions
   - [files.py](files.py) explains how to interact with files
