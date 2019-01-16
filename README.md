@@ -47,6 +47,7 @@ Here's some table of content about what's in this repo:
   - [hello.py](hello.py) simply does a few prints (hello world!)
   - [inputs.py](inputs.py) shows how to use the `input` function to get a user's feedback
   - [lists.py](lists.py) shows how to use lists in Python
+  - [nulls.py](nulls.py) demonstrates how null (NoneType) values are handled
   - [numbers.py](numbers.py) explains how numbers work and how to deal with them
   - [ordered_dict.py](ordered_dict.py) features the usage of the `OrderedDict` Python structure
   - [pi_digits.py](pi_digits.py) deals with some pi number related stuff
