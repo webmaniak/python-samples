@@ -59,3 +59,16 @@ try:
     print(5/0)
 except ZeroDivisionError:
     print("Woops! 5 cannot be divided by 0!")
+
+print("------------------------------")
+print("Numeric checks")
+print("------------------------------")
+
+def is_numeric_value(value):
+    return isinstance(value, (int, float, complex))
+
+print(f'Is 1.0 numeric? {is_numeric_value(1.0)}!')
+#print(f'Is 1,1 numeric? {is_numeric_value('1,0')}!')
+print(f'Is 1 numeric? {is_numeric_value(1.0)}!')
+print(f'Is 7e15 numeric? {is_numeric_value(7e15)}!')
+#print(f'Is 9spam19 numeric? {is_numeric_value('9spam19')}')
