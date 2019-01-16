@@ -65,10 +65,47 @@ print("Numeric checks")
 print("------------------------------")
 
 def is_numeric_value(value):
+    """Checks whether the type of the passed value is numeric."""
     return isinstance(value, (int, float, complex))
 
-print(f'Is 1.0 numeric? {is_numeric_value(1.0)}!')
-#print(f'Is 1,1 numeric? {is_numeric_value('1,0')}!')
-print(f'Is 1 numeric? {is_numeric_value(1.0)}!')
-print(f'Is 7e15 numeric? {is_numeric_value(7e15)}!')
-#print(f'Is 9spam19 numeric? {is_numeric_value('9spam19')}')
+def try_parse_int(value):
+    """Tries to parse the given value into an int."""
+    try:
+        return int(value)
+    except Exception:
+        return None
+
+# Checking value types
+numeric_one = 1
+text_one = '1'
+scientific_val = 7.433e-15
+float_one = 1.1
+none_type = None
+
+print(f'Is {numeric_one} numeric? {is_numeric_value(numeric_one)}!'
+        f' It\'s a {type(numeric_one).__name__}')
+print(f'Is {text_one} numeric? {is_numeric_value(text_one)}!'
+        f' It\'s a {type(text_one).__name__}')
+print(f'Is {scientific_val} numeric? {is_numeric_value(scientific_val)}!'
+        f' It\'s a {type(scientific_val).__name__}')
+print(f'Is {float_one} numeric? {is_numeric_value(float_one)}!'
+        f' It\'s a {type(float_one).__name__}')
+print(f'Is {none_type} numeric? {is_numeric_value(none_type)}!'
+        f' It\'s a {type(none_type).__name__}')
+
+# Testing parse features
+print('\n')
+
+print(f'Can {scientific_val} be parsed in an int?')
+result = try_parse_int(scientific_val)
+if result:
+    print('Yes, of course!')
+else:
+    print('No, unfortunately.')
+
+print(f'Can {text_one} be parsed in an int?')
+result = try_parse_int(text_one)
+if result:
+    print('Yes, of course!')
+else:
+    print('No, unfortunately.')
