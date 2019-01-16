@@ -149,3 +149,25 @@ text = 'Hello World!'
 for c in reverse_string_generator(text):
     print(c)
 """
+
+# ------------------------------
+# Demonstrate how function argument 
+# unpacking works
+# ------------------------------
+
+"""
+from functions import print_vector
+
+vec_list = [1, 0, 1]
+vec_dict = {'y': 0, 'x': 1, 'z': 0}
+
+# The hard way
+print_vector(vec_list[0], vec_list[1], vec_list[2])
+
+# With the unpacking feature
+# (automatically sends separate values instead of the whole list)
+print_vector(*vec_list)
+
+# With the unpacking feature (and a dictionary)
+print_vector(**vec_dict)
+"""

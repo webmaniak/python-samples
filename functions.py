@@ -56,6 +56,7 @@ def get_talking_volume2(text, music_volume):
         return low
 
 def make_multiplier(n):
+    """Factory for multipy() function."""
     def multiply(x):
         return x * n
 
@@ -86,6 +87,7 @@ def make_pizza(radius, *toppings):
         print("- " + topping)
 
 def format_friend_list(name, **friends):
+    """Prints the name of somebody, followed by his/her friends."""
     print(f'Hello to {name} and his following friends:')
     for position, friend_name in friends.items():
         print(f'- {position}: {friend_name}')
@@ -95,3 +97,7 @@ def reverse_string_generator(text):
     length = len(text)
     for c in range(length - 1, -1, -1):
         yield text[c]
+
+def print_vector(x, y, z):
+    """Prints a given vector."""
+    print(f'<{x}, {y}, {z}>')
