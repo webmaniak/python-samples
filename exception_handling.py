@@ -5,7 +5,12 @@
 #import sys
 #sys.path.append('classes/')
 
-from classes.custom_exception import MyCustomError
+from classes.custom_exception import MyCustomError, UnhandledCustomError
+import traceback
+import logging
+
+logging.basicConfig(level=logging.DEBUG)
+logger = logging.getLogger(__name__)
 
 print("------------------------------")
 print("Exception handling")
@@ -36,6 +41,14 @@ def parent_function():
         nested_function()
     except MyCustomError as mce:
         print('This is an exception managed by the parent function: (' + type(mce).__name__ + ') ' + mce.message)
+
+def alt_parent_function():
+    """Calls a nested function and throws the exception again."""
+
+    try:
+        nested_function()
+    except MyCustomError as mce:
+        raise UnhandledCustomError('Raised because of MCE.') from mce
 
 def nested_function():
     """Executes an unsafe function and throw the error further."""
@@ -81,3 +94,12 @@ print('5 / 0 = ' + str(divide_safely(5, 0)))
 # ------------------------------
 
 parent_function() # it will manage the error raised by its nested function
+
+# Here's some example of logging errors:
+print('-----')
+try:
+    alt_parent_function()
+except UnhandledCustomError as uce:
+    logger.log(logging.INFO,'Unhandled custom error raised: ' + uce.message)
+    logger.exception(uce)
+    
