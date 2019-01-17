@@ -36,6 +36,7 @@ Here's some table of content about what's in this repo:
   - [underscores.py](classes/underscores.py) defines a class with various underscores (_) to show how they can be used
 - [tests](tests/) contains unit tests for some of the code (especially classes)
 - There are other modules in the [root](#) folder too:
+  - [copy_clone.py](copy_clone.py) explains how to make clone/copy of objects
   - [datetime_usage.py](datetime_usage.py) shows how to use the datetime API from Python
   - [decorators_use.py](decorators_use.py) demonstrates some use cases of decorators defined in [decorators.py](decorators.py)
   - [decorators.py](decorators.py) defines a few sample decorators
